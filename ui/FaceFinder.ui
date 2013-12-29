@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FaceFinderWidget</class>
+ <widget class="QMainWindow" name="FaceFinderWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>648</width>
+    <height>533</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Face Finder</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../faceFinder.qrc">
+    <normaloff>:/images/ff.png</normaloff>:/images/ff.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="VisualizationWidget" name="videoWidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>648</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionVideoFit"/>
+    <addaction name="actionFpsShow"/>
+    <addaction name="actionScannerFrameShow"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionSetVideo"/>
+    <addaction name="actionSetScanner"/>
+    <addaction name="actionSetRecognizer"/>
+    <addaction name="actionSetDatabase"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuProgram">
+    <property name="title">
+     <string>Program</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuProgram"/>
+   <addaction name="menuView"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionSetVideo">
+   <property name="text">
+    <string>Video Source...</string>
+   </property>
+  </action>
+  <action name="actionSetScanner">
+   <property name="text">
+    <string>Scanner ...</string>
+   </property>
+  </action>
+  <action name="actionSetRecognizer">
+   <property name="text">
+    <string>Recognizer ...</string>
+   </property>
+  </action>
+  <action name="actionSetDatabase">
+   <property name="text">
+    <string>Database ...</string>
+   </property>
+  </action>
+  <action name="actionVideoFit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fit video</string>
+   </property>
+  </action>
+  <action name="actionFpsShow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show FPS</string>
+   </property>
+  </action>
+  <action name="actionScannerFrameShow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show scanner frame</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VisualizationWidget</class>
+   <extends>QWidget</extends>
+   <header>src/visualizationwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../faceFinder.qrc"/>
+ </resources>
+ <connections/>
+</ui>

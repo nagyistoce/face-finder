@@ -1,0 +1,18 @@
+<img align="left" src="splash.png">
+<br><br><br><table align="left">
+<tr>
+ <td><b>Version</b></td> <td>2.0</td>
+</tr>
+<tr>
+<td><b>License:</b></td> <td>GPL</td>
+</tr>
+<tr>
+<td><b>Author</b></td> <td> Łukasz Korbel</td></tr>
+<tr>
+<td><b>E-mail:</b></td> <td>korbel85@gmail.com</td></tr>
+</table><br><br><br><br><br><br><br><br>
+Face Finder is system for face recognition written in C++. It uses OpenCV library to get image from web camera.<br>
+Image is transformed to Eigenfaces space and learn in Counter-Propagation Neural Network. <br>
+This documentation describes all classes need to build working system.<br>
+The example of system implemetation is program face-finder with GUI written in QT4.5 and was not documented here.
+<br><br><br><br><br>
